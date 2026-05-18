@@ -1,5 +1,8 @@
 # wx-ilink-cli
 
+[![CI](https://github.com/ccuuu/wx-ilink-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/ccuuu/wx-ilink-cli/actions/workflows/ci.yml)
+[![License](https://img.shields.io/github/license/ccuuu/wx-ilink-cli)](./LICENSE)
+
 Minimal macOS CLI for WeChat iLink.
 
 `wx-ilink-cli` provides a local `wx` command that can log in to WeChat with a QR
