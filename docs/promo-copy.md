@@ -32,7 +32,8 @@ cd wx-ilink-cli
 nvm use
 npm install
 npm run build
-node dist/src/cli.js --help
+npm run link:wx
+wx --help
 ```
 
 ## Long Post
@@ -66,22 +67,23 @@ https://github.com/ccuuu/wx-ilink-cli
    nvm use
    npm install
    npm run build
+   npm run link:wx
    ```
 
 2. Start watch mode:
 
    ```sh
-   node dist/src/cli.js watch --resume
+   wx watch --resume
    ```
 
 3. Show recent peers:
 
    ```sh
-   node dist/src/cli.js recent
+   wx recent
    ```
 
 4. Send a reply:
 
    ```sh
-   node dist/src/cli.js send <user-id-or-alias> "hello"
+   wx send <user-id-or-alias> "hello"
    ```

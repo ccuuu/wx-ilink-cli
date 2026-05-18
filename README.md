@@ -36,7 +36,7 @@ nvm use
 
 ## Quick Start
 
-Clone the repository and build it:
+Clone the repository, build it, and link the local `wx` command:
 
 ```bash
 git clone git@github.com:ccuuu/wx-ilink-cli.git
@@ -44,27 +44,21 @@ cd wx-ilink-cli
 nvm use
 npm install
 npm run build
-node dist/src/cli.js --help
+npm run link:wx
+wx --help
 ```
 
 Then verify the CLI:
 
 ```bash
-node dist/src/cli.js status
-```
-
-If you want the short `wx` command on your own machine, link the local checkout:
-
-```bash
-npm run link:wx
-wx --help
+wx status
 ```
 
 If `wx` is already used by another command on the machine, use the long binary
 name instead:
 
 ```bash
-wx-ilink-cli login
+wx-ilink-cli --help
 ```
 
 ## Provided Commands
