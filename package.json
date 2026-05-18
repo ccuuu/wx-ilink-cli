@@ -1,0 +1,54 @@
+{
+  "name": "wx-ilink-cli",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Minimal macOS CLI for WeChat iLink with ephemeral QR login",
+  "license": "MIT",
+  "author": "Lufan You",
+  "homepage": "https://github.com/ccuuu/wx-ilink-cli#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccuuu/wx-ilink-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ccuuu/wx-ilink-cli/issues"
+  },
+  "keywords": [
+    "wechat",
+    "wx",
+    "cli",
+    "ilink",
+    "bot",
+    "macos"
+  ],
+  "bin": {
+    "wx": "dist/src/cli.js",
+    "wx-ilink-cli": "dist/src/cli.js"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist",
+    "postbuild": "chmod +x dist/src/cli.js",
+    "prepare": "npm run build",
+    "prepack": "npm run build",
+    "check": "npm run typecheck && npm run build",
+    "link:wx": "npm run build && npm link",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "qrcode-terminal": "^0.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.17",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
